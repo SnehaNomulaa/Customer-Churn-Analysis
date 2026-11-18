@@ -1,97 +1,146 @@
-# 📊 Customer_Churn_Analysis – End-to-End Data Analytics Project
+# 📊 Customer Churn Analysis – End-to-End Data Analytics Project
 
-### 📌 Overview
+## 📌 Project Overview
 
-This project focuses on analyzing customer churn using an end-to-end data analytics workflow. The goal is to identify key factors influencing customer churn and present actionable business insights using SQL, Power BI, and Python.
-The project simulates a real-world analytics scenario followed in MNC data teams, covering data extraction, exploratory data analysis, visualization, and predictive modeling.
+This project focuses on analyzing customer churn using an end-to-end data analytics workflow. The objective is to identify key factors influencing customer churn, understand customer behavior, and generate actionable business insights using SQL Server, Power BI, and Python.
 
-### 🗂️ Dataset
+The project covers data exploration, SQL-based analysis, interactive dashboard development, and machine learning-based churn prediction.
 
-* Customer churn dataset (CSV format).
-  
-* Contains customer demographics, service usage, billing details, and churn status.
+## 🗂️ Dataset
 
-* Dataset was loaded into SQL Server for analysis.
+- Customer churn dataset in CSV format.
+- Contains customer demographics, service usage, billing details, and churn status.
+- Dataset loaded into SQL Server for analysis.
+- Dataset source: Add the original dataset source or download link here.
 
-### 🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 
-* SQL Server Management Studio (SSMS) – Data loading & SQL-based EDA.
+| Tool | Purpose |
+|---|---|
+| SQL Server / SSMS | Data loading and SQL-based analysis |
+| SQL | Data cleaning, aggregation, and business analysis |
+| Power BI | Interactive dashboard development |
+| Python | Data preprocessing and machine learning |
+| Pandas & NumPy | Data manipulation |
+| Scikit-learn | Model building and evaluation |
+| Jupyter Notebook | Model development and experimentation |
 
-* SQL – Data cleaning, aggregation, and business analysis.
+## 🔍 SQL Exploratory Data Analysis
 
-* Power BI – Interactive dashboard creation.
+Performed SQL-based exploratory data analysis using SQL Server Management Studio.
 
-* Python – Data preprocessing & churn prediction model.
+Key activities:
+- Checked data quality, NULL values, and duplicates.
+- Analyzed overall customer churn distribution.
+- Examined churn trends based on:
+  - Customer tenure
+  - Services used
+  - Contract type
+  - Monthly charges
+- Created aggregated queries to support dashboard metrics.
 
-* Jupyter Notebook – Model development & evaluation.
+## 📈 Power BI Dashboard
 
-### 🔍 SQL Exploratory Data Analysis (SSMS)
+Developed an interactive Power BI dashboard consisting of three pages.
 
-* Performed detailed EDA using SQL to:
+**1. Churn Analysis – Summary**
+- Total customers and new joiners.
+- Total churn and overall churn rate.
+- Churn analysis by gender and age group.
+- Churn trends by state, internet type, payment method, and contract.
+- Customer service usage analysis.
 
-* Check data quality (NULL values, duplicates)
+**2. Churn Reason**
+- Analysis of customer churn reasons.
+- Identification of common factors associated with customer dissatisfaction.
 
-* Analyze churn distribution
+**3. Churn Prediction**
+- Predicted churner customer profiles.
+- Customer distribution by age, marital status, and tenure.
+- Customer risk analysis by state and payment method.
+- Table displaying predicted churner details.
 
-* Identify churn trends across:
+## 📸 Dashboard Screenshots
 
-  * Customer tenure
+### 1. Customer Churn – Summary Dashboard
 
-  * Services used
+![Churn Summary](images/churn-summary.png)
 
-  * Contract type
+### 2. Customer Churn – Prediction Dashboard
 
-  * Monthly charges
-  
-* Create aggregated views to support dashboard metrics.
+![Churn Prediction](images/churn-prediction.png)
 
-### 📈 Power BI Dashboard
+## 🤖 Machine Learning – Churn Prediction
 
-Built an interactive Power BI dashboard to visualize:
+Implemented a Random Forest Classifier to predict customer churn.
 
-* Overall churn rate.
+Key steps:
+- Data preprocessing and feature encoding.
+- Train-test split.
+- Random Forest model training.
+- Model evaluation using classification metrics.
+- Confusion matrix analysis.
+- Feature importance analysis.
 
-* Churn by contract type, tenure, and services.
+### Model Performance
 
-* Customer segmentation insights.
+| Metric | Churn Class (1) |
+|---|---:|
+| Precision | 83% |
+| Recall | 62% |
+| F1-Score | 71% |
 
-* Key KPIs for business decision-making.
+**Overall Model Accuracy: 85%**
 
-### 🤖 Machine Learning (Churn Prediction)
+The model identifies important factors influencing customer churn, including total revenue, contract type, total charges, and monthly charges.
 
-* Built a churn prediction model using Random Forest
+## ✅ Key Business Insights
 
-* Performed:
+- Identified customer segments with higher churn tendencies.
+- Analyzed the relationship between contract types and customer churn.
+- Explored the impact of payment methods and services on churn.
+- Identified important features influencing churn predictions.
+- Presented business-friendly insights through interactive dashboards.
 
-  * Feature encoding
+## 🚀 How to Run the Project
 
-  * Train-test split
+1. Download or clone this repository.
+2. Load the customer churn CSV dataset into SQL Server.
+3. Open `etl_queries.sql` in SQL Server Management Studio.
+4. Execute the SQL queries for data exploration and analysis.
+5. Open `Churn Analysis.pbix` using Power BI Desktop.
+6. Explore the interactive dashboard pages.
+7. Open `Churn_Prediction.ipynb` in Jupyter Notebook.
+8. Install the required Python libraries and execute the notebook cells.
 
-  * Model evaluation
+## 📁 Project Structure
 
-* Used the model to predict churn on new/unseen customer data
+```text
+Customer-Churn-Analysis/
+│
+├── images/
+│   ├── churn-summary.png
+│   ├── churn-prediction.png
+│   └── README.md
+│
+├── Churn Analysis.pbix
+├── Churn_Prediction.ipynb
+├── etl_queries.sql
+├── README.md
+└── LICENSE
+```
 
-### ✅ Key Outcomes
+## 👩‍💻 Author
 
-* Identified major drivers of customer churn
+**Sneha Nomula**
 
-* Delivered business-friendly insights through dashboards
-
-* Demonstrated strong integration of SQL, BI, and ML workflows
-
-* Built a project aligned with real-world data analyst expectations
-
-### 🚀 How to Run the Project
-
-* Load the dataset into SQL Server
-
-* Execute SQL queries from eda_queries.sql
-
-* Open the Power BI file to explore dashboards
-
-* Run the Jupyter Notebook for churn predictions
-
-## Author
-### Sneha Nomula
 Aspiring Data Analyst | SQL | Python | Power BI
+
+GitHub: [SnehaNomulaa](https://github.com/SnehaNomulaa)
+
+## 📌 Project Reference
+
+This project was adapted from an existing public GitHub project, with attribution to the original repository:
+
+[Original Customer Churn Analysis Repository](https://github.com/akshithkumar07/Customer_Churn_Analysis)
 
